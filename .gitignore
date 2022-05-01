@@ -1,3 +1,5 @@
 # Dependency directories
 task-manager/node_modules/
 task-manager/jspm_packages/
+
+notes-app/node_modules/
