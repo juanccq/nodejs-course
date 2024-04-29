@@ -24,8 +24,9 @@ console.log(productLabel);
 console.log(stock);
 console.log(rating);
 
-const transaction = (type, { label, stock }) => {
-    console.log(`Transaction type: ${type}`);
+const transaction = (type, { label, stock = 0 }= {}) => {
+    console.log(`Transaction type: ${type} ${label} ${stock}`);
 }
 
-transaction('order', product);
+// transaction('order', product);
+transaction('order');
