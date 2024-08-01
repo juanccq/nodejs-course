@@ -77,4 +77,49 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     // db.collection('users').find({ age: 41 }).count((error, count) => {
     //     console.log(count);
     // });
+
+    // const updatePromise = db.collection('users').updateOne({
+    //     _id: new ObjectId('6632dc79763006c515a2b24a')
+    // }, {
+    //     // $set: {
+    //     //     name: 'Carlos'
+    //     // }
+    //     $inc: { 
+    //         age: 1
+    //     }
+    // });
+
+    // updatePromise.then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // })
+
+    // db.collection('tasks').updateMany({
+    //     completed: false
+    // }, {
+    //     $set: {
+    //         completed: true
+    //     }
+    // }).then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // })
+
+    // db.collection('users').deleteMany({
+    //     age: 41
+    // }).then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // })
+
+    db.collection('tasks').deleteOne({
+        description: 'Task 1'
+    }).then((result) => {
+        console.log(result);
+    }).catch((error) => {
+        console.log(error);
+    })
 })
